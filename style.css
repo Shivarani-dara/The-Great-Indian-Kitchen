@@ -1,0 +1,86 @@
+.hero-section {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  min-height: 500px;
+  background: url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=2560&q=90') center center / cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.5s;
+  z-index: 2;
+}
+.hero-section:hover .hero-overlay,
+.hero-section:focus-within .hero-overlay {
+  opacity: 1;
+}
+.hero-text-content {
+  color: #fff;
+  text-align: center;
+  font-family: 'Playfair Display', 'Georgia', serif;
+  font-size: 2.7rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-shadow: 0 4px 32px #000, 0 1px 2px #000;
+  padding: 0 1rem;
+}
+.hero-text-content span {
+  display: block;
+  font-size: 1.3rem;
+  font-weight: 400;
+  margin-top: 1.5rem;
+  letter-spacing: 0.5px;
+  text-shadow: 0 2px 8px #000;
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    height: 60vh;
+    min-height: 300px;
+  }
+  .hero-text-content {
+    font-size: 1.5rem;
+    padding: 0 0.5rem;
+  }
+  .hero-text-content span {
+    font-size: 1rem;
+    margin-top: 1rem;
+  }
+}
+
+.navbar {
+  min-height: 64px;
+  padding-top: 0.7rem;
+  padding-bottom: 0.7rem;
+  font-size: 1.05rem;
+}
+
+.navbar-brand {
+  font-family: 'Playfair Display', 'Georgia', serif;
+  font-size: 1.7rem;
+  letter-spacing: 1.5px;
+  font-weight: 700;
+  color:black
+  text-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.nav-link {
+  padding-top: 0.5rem !important;
+  padding-bottom: 0.5rem !important;
+  font-size: 1.05rem;
+}
+.navbar-brand .fa-utensils {
+  color:white;
+  font-size: 1.3em;
+  vertical-align: middle;
+}
